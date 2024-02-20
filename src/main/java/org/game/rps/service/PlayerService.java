@@ -1,7 +1,6 @@
 package org.game.rps.service;
 
 import org.game.rps.domain.Player;
-import org.game.rps.domain.Statistic;
 import org.game.rps.domain.dto.RequestPlayerDto;
 import org.game.rps.domain.mapper.PlayerMapper;
 import org.game.rps.repository.PlayerRepository;

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Rock, Scissors, Paper</title>
+    </head>
+
+    <body style="background-color: #252d36;">
+    <div th:replace="~{layouts/header :: header}"></div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <h2 class="text-center mb-4 text-white">Choose an Option</h2>
+
+                <form th:action="@{/games/rock-paper-scissors-result}" method="post">
+                    <div class="btn-group btn-group-lg d-flex" role="group">
+                        <button th:each="option : ${selection}" th:text="${option}" th:value="${option}" type="submit"
+                                name="selection" class="btn btn-primary flex-fill me-2">
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

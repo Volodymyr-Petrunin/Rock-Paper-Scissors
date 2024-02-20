@@ -20,6 +20,7 @@ public class WebSecurityConfiguration {
                 .authorizeHttpRequests(request -> request
                         .requestMatchers("/", "/webjars/**", "/static/**").permitAll()
                         .requestMatchers("/player/reg").anonymous()
+                        .anyRequest().authenticated()
 
                 )
                 .formLogin(form -> form

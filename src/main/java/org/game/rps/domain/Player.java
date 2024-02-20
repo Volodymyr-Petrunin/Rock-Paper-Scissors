@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Objects;
+
 @Entity
 @Getter
 @Setter
@@ -21,4 +23,17 @@ public class Player {
     @OneToOne
     @JoinColumn(name = "statistic_id")
     private Statistic statistic;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Player player = (Player) o;
+        return Objects.equals(id, player.id) && Objects.equals(name, player.name) && Objects.equals(password, player.password);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, password);
+    }
 }
