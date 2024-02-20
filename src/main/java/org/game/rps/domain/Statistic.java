@@ -51,4 +51,15 @@ public class Statistic {
     public int hashCode() {
         return Objects.hash(id, totalGames, wonGames, lostGames, drawGames);
     }
+
+    @Override
+    public String toString() {
+        return "Statistic{" +
+                "id=" + id +
+                ", totalGames=" + totalGames +
+                ", wonGames=" + wonGames +
+                ", lostGames=" + lostGames +
+                ", drawGames=" + drawGames +
+                '}';
+    }
 }

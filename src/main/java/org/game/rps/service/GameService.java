@@ -1,5 +1,6 @@
 package org.game.rps.service;
 
+import jakarta.transaction.Transactional;
 import org.game.rps.domain.Result;
 import org.game.rps.domain.Selection;
 import org.game.rps.domain.dto.ResponsePlayerDto;
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.Random;
 
 @Service
+@Transactional
 public class GameService {
     private final Random random;
 

@@ -13,7 +13,7 @@
             <div class="col-md-4 offset-md-4">
                 <h2 class="text-center mb-4 text-white">Choose an Option</h2>
 
-                <form th:action="@{/games/rock-paper-scissors-result}" method="post">
+                <form th:action="@{/games/rock-paper-scissors-result}" method="get">
                     <div class="btn-group btn-group-lg d-flex" role="group">
                         <button th:each="option : ${selection}" th:text="${option}" th:value="${option}" type="submit"
                                 name="selection" class="btn btn-primary flex-fill me-2">

@@ -1,5 +1,6 @@
 package org.game.rps.service;
 
+import jakarta.transaction.Transactional;
 import org.game.rps.domain.Player;
 import org.game.rps.domain.dto.RequestPlayerDto;
 import org.game.rps.domain.mapper.PlayerMapper;
@@ -9,6 +10,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
+@Transactional
 public class PlayerService {
     private final PlayerRepository repository;
     private final PlayerMapper playerMapper;

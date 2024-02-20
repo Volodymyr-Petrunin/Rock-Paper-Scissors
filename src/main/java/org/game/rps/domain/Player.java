@@ -10,6 +10,10 @@ import java.util.Objects;
 @Getter
 @Setter
 @Table(name = "players")
+@NamedEntityGraph(name = "player-entity-graph",
+    attributeNodes = {
+    @NamedAttributeNode("statistic")
+})
 public class Player {
     @Id
     @Column(name = "player_id")

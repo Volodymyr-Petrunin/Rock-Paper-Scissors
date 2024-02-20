@@ -1,5 +1,6 @@
 package org.game.rps.service;
 
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.game.rps.domain.Player;
 import org.springframework.security.core.GrantedAuthority;
@@ -9,6 +10,7 @@ import java.util.Collection;
 import java.util.Collections;
 
 @RequiredArgsConstructor
+@Getter
 public class UserDetailsImpl implements UserDetails {
 
     private final Player player;
