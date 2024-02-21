@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>My Statistic</title>
+</head>
+<body style="background-color: #252d36;">
+
+<div th:replace="~{layouts/header :: header}"></div>
+
+<div class="container mt-5 text-white">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h2 class="text-center mb-4">My Statistic</h2>
+
+            <div class="statistic">
+                <p th:text="'Total: ' + ${statistic.getTotalGames()}"></p>
+                <p th:text="'Wins: ' + ${statistic.getWonGames()}"></p>
+                <p th:text="'Losses: ' + ${statistic.getLostGames()}"></p>
+                <p th:text="'Draws: ' + ${statistic.getDrawGames()}"></p>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
