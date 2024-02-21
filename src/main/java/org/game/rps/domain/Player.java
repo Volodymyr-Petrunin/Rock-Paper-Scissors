@@ -28,6 +28,16 @@ public class Player {
     @JoinColumn(name = "statistic_id")
     private Statistic statistic;
 
+    public Player() {
+    }
+
+    public Player(Long id, String name, String password, Statistic statistic) {
+        this.id = id;
+        this.name = name;
+        this.password = password;
+        this.statistic = statistic;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

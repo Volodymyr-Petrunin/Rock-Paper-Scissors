@@ -27,6 +27,10 @@ public class PlayerService {
         this.statisticServices = statisticServices;
     }
 
+    /**
+     * I've chosen not to include explicit validation in this code since,
+     * in my perspective, handling this default validation is best suited for the frontend.
+     */
     public void createPlayer(RequestPlayerDto dto){
         Player player = playerMapper.requestPlayerDtoToPlayer(dto);
         player.setPassword(passwordEncoder.encode(player.getPassword()));

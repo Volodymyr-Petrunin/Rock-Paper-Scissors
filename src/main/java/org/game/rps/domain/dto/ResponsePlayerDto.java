@@ -1,12 +1,12 @@
 package org.game.rps.domain.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.game.rps.domain.Result;
 import org.game.rps.domain.Selection;
 
 @AllArgsConstructor
+@EqualsAndHashCode
+@ToString
 @Getter
 @Setter
 public class ResponsePlayerDto {

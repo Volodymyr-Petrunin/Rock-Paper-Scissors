@@ -33,7 +33,6 @@ public class RpsController {
 
     @GetMapping("/rock-paper-scissors")
     public String selectionRps(Model model){
-
         model.addAttribute("selection", Selection.values());
         return "rock-paper-scissors";
     }
