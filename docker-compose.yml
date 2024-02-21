@@ -1,0 +1,24 @@
+services:
+  postgres:
+    image: postgres
+    container_name: postgres
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: Rock-Paper-Scissors
+    networks:
+      - rps-network
+
+  rock-paper-scissors:
+    build: .
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/Rock-Paper-Scissors
+    ports:
+      - 8080:8080
+    networks:
+     - rps-network
+
+
+networks:
+  rps-network:
