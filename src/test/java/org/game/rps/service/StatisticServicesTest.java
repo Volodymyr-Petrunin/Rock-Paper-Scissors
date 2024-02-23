@@ -40,8 +40,6 @@ class StatisticServicesTest {
 
          actual = statisticServices.createDefaultStatistic();
 
-        System.out.println(statisticRepository.findAll());
-
          assertEquals(expected, actual);
     }
 
@@ -50,8 +48,6 @@ class StatisticServicesTest {
         expected = new Statistic(1L, 21, 11, 5, 5); // Expected for changed total and won games
 
         statisticServices.updateStatistic(userDetails, Result.WIN);
-
-        System.out.println(statisticRepository.findAll());
 
         actual = statisticRepository.findById(1L)
                 .orElseThrow(() -> new IllegalArgumentException("Can't fetch statistic"));
@@ -65,8 +61,6 @@ class StatisticServicesTest {
 
         statisticServices.updateStatistic(userDetails, Result.LOSE);
 
-        System.out.println(statisticRepository.findAll());
-
         actual = statisticRepository.findById(1L)
                 .orElseThrow(() -> new IllegalArgumentException("Can't fetch statistic"));
 
@@ -78,8 +72,6 @@ class StatisticServicesTest {
         expected = new Statistic(1L, 21, 10, 5, 6);
 
         statisticServices.updateStatistic(userDetails, Result.DRAW);
-
-        System.out.println(statisticRepository.findAll());
 
         actual = statisticRepository.findById(1L)
                 .orElseThrow(() -> new IllegalArgumentException("Can't fetch statistic"));
